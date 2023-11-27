@@ -207,7 +207,7 @@ a {
 
 .addblog-form {
   display: flex;
-  width: 350px;
+  width: 400px;
   justify-content: center;
   align-items: start;
   flex-direction: column;
@@ -217,12 +217,11 @@ a {
   border-radius: 10px;
 }
 
-.form-content {
+.form-items{
+  width: 100%;
   display: flex;
-  justify-content: center;
-  align-items: start;
-  flex-direction: column;
-  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .btn {
