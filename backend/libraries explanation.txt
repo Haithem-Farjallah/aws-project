@@ -1,0 +1,54 @@
+what is the purpose of ech library ?  "express", "mysql", "body-parser", "cors" ?
+-----------------
+In short explanation:
+
+express: A minimal and flexible Node.js web application framework.
+mysql: A Node.js driver for MySQL.
+body-parser: Middleware to parse incoming request bodies.
+cors: Middleware to enable Cross-Origin Resource Sharing.
+
+-----------------
+The libraries used in the Node.js backend serve different purposes. Let's go through each one:
+
+1. Express:
+
+	1.1 Purpose: Express is a web application framework for Node.js. 
+	It simplifies the process of building robust web applications by 
+	providing a set of features for routing, handling HTTP requests 
+	and responses, and middleware support. Express makes it easier 
+	to organize and structure your web application.
+
+
+2. MySQL (mysql module):
+
+	2.1 Purpose: The mysql module is used to interact with MySQL databases. 
+	It allows Node.js applications to connect to MySQL databases, execute 
+	SQL queries, and manage the flow of data between the application and the 
+	database.
+
+
+3. Body-parser:
+
+	3.1 Purpose: The body-parser middleware is used to parse the body of 
+	incoming HTTP requests. When a client sends data to the server, it is 
+	often sent in the body of the request. body-parser parses this data 
+	and makes it accessible in the req.body object. In the context of your 
+	project, it is used to parse JSON data from the Angular frontend.
+
+
+4. CORS (Cross-Origin Resource Sharing):
+
+	4.1 Purpose: CORS is a security feature implemented by web browsers 
+	that restricts web pages from making requests to a different domain 
+	than the one that served the web page. In a development environment 
+	where your Angular app and Node.js server might be running on different 
+	ports or domains, CORS can cause issues. The cors middleware is used 
+	to enable Cross-Origin Resource Sharing, allowing your Angular app 
+	to make requests to the Node.js server.
+
+
+In summary, these libraries collectively help in building a robust and 
+secure web application. Express simplifies the web application development 
+process, the mysql module facilitates communication with MySQL databases, 
+body-parser handles parsing of request bodies, and cors enables cross-origin 
+resource sharing.

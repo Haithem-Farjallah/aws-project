@@ -1,0 +1,49 @@
+<div class="add-blog-div">
+  <h1>Add Blog</h1>
+  <br />
+  <form class="addblog-form" ng-submit="addBlog()">
+    <div class="form-content">
+      <div class="form-items">
+        <label for="blog-title">Add Title</label>
+        <input type="text" title="blog-title" ng-model="newBlog.title" />
+      </div>
+      <div class="form-items">
+        <label for="blog-author">Author's Name</label>
+        <input type="text" title="blog-title" ng-model="newBlog.author" />
+      </div>
+      <!-- <div class="form-items">
+        <label for="blog-thumbnail">Thumbnail</label>
+        <input
+          type="file"
+          title="blog-thumbnail"
+          ng-model="newBlog.thumbnail"
+          accept=".jpg, .jpeg, .png"
+        />
+      </div> -->
+      <div class="form-items">
+        <label for="blog-thumbnail">Thumbnail</label>
+        <input
+          type="text"
+          title="blog-thumbnail"
+          value="images/fixed.jpg"
+        />
+      </div>
+      <div class="form-items">
+        <label for="blog-sdesc">Short Description</label>
+        <input
+          type="text"
+          title="blog-sdesc"
+          ng-model="newBlog.short_description"
+          maxlength="500"
+        />
+      </div>
+      <div class="form-items">
+        <label for="blog-desc">Description</label>
+        <input type="text" title="blog-desc" ng-model="newBlog.description" />
+      </div>
+      <div class="btn">
+        <input class="button" type="submit" value="Submit" />
+      </div>
+    </div>
+  </form>
+</div>
