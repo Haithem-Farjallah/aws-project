@@ -29,9 +29,8 @@ shauryasBlogsApp.config([
 // controllers
 shauryasBlogsApp.controller("SBController", [
   "$scope",
-  "$routeParams",
   "$http",
-  function ($scope, $routeParams, $http) {
+  function ($scope, $http) {
     // Initialize newBlog
     $scope.newBlog = {
       title: "",
