@@ -12,14 +12,14 @@ shauryasBlogsApp.config([
         templateUrl: "views/blogs.html",
         controller: "SBController",
       })
-      .when("/addblog", {
-        templateUrl: "views/addBlog.html",
-        controller: "SBController",
-      })
-      .when("/blog/:blogId", {
-        templateUrl: "views/blog.html",
-        controller: "SBController",
-      })
+      // .when("/addblog", {
+      //   templateUrl: "views/addBlog.html",
+      //   controller: "SBController",
+      // })
+      // .when("/blog/:blogId", {
+      //   templateUrl: "views/blog.html",
+      //   controller: "SBController",
+      // })
       .otherwise({
         redirectTo: "/home",
       });
