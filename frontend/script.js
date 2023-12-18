@@ -12,14 +12,6 @@ shauryasBlogsApp.config([
         templateUrl: "views/blogs.html",
         controller: "SBController",
       })
-      // .when("/addblog", {
-      //   templateUrl: "views/addBlog.html",
-      //   controller: "SBController",
-      // })
-      // .when("/blog/:blogId", {
-      //   templateUrl: "views/blog.html",
-      //   controller: "SBController",
-      // })
       .otherwise({
         redirectTo: "/home",
       });
@@ -35,7 +27,7 @@ shauryasBlogsApp.controller("SBController", [
     $scope.newBlog = {
       title: "",
       author: "",
-      thumbnail: "https://c4.wallpaperflare.com/wallpaper/792/90/510/lenovo-legion-5-hd-wallpaper-preview.jpg",
+      thumbnail: "",
       short_description: "",
       description: "",
     };
