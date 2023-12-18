@@ -1,19 +1,16 @@
 const express = require("express");
-// const mysql = require('mysql2');
 const mysql = require("mysql");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 
 const app = express();
 
-// Use CORS middleware
 app.use(cors());
 app.use(bodyParser.json());
 
 const db = mysql.createConnection({
   host: "localhost",
   user: "root",
-  // password: "RaHuL@4646",
   password: "",
   multipleStatements: true,
 });
@@ -251,32 +248,6 @@ db.connect((err) => {
     });
   }
 });
-
-// // Retrieve blogs
-// app.get("/api/blogs", (req, res) => {
-//   db.query("SELECT * FROM blogs", (err, results) => {
-//     if (err) throw err;
-//     res.json(results);
-//   });
-// });
-
-// // Add a new blog
-// app.post("/api/blogs", (req, res) => {
-//   const newBlog = req.body;
-//   db.query("INSERT INTO blogs SET ?", newBlog, (err, results) => {
-//     if (err) throw err;
-//     res.json({ id: results.insertId });
-//   });
-// });
-
-// // Remove a blog
-// app.delete("/api/blogs/:id", (req, res) => {
-//   const blogId = req.params.id;
-//   db.query("DELETE FROM blogs WHERE id = ?", blogId, (err) => {
-//     if (err) throw err;
-//     res.json({ message: "Blog deleted successfully" });
-//   });
-// });
 
 // Start the server
 const port = 3000;
