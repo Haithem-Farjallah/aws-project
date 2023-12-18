@@ -92,11 +92,11 @@ a {
   margin: 0;
 }
 
-.menu {
+/* .menu {
   width: 100%;
   display: flex;
   justify-content: space-around;
-  /* align-items: center; */
+  align-items: center;
 }
 
 .dropdown-div {
@@ -131,7 +131,7 @@ a {
   padding: 5px;
   cursor: pointer;
   font-size: 0.7rem;
-}
+} */
 
 #search {
   padding: 5px;

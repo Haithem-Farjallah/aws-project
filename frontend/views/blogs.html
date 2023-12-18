@@ -1,25 +1,6 @@
 <div class="blogs-div">
   <h1>Blogs</h1>
   <div class="menu">
-    <!-- Dropdown -->
-    <!-- <div class="dropdown-div">
-      <p ng-click="toggleDropdown($event)">Filters</p>
-      <div
-        ng-show="isDropdownVisible"
-        class="dropdown"
-        ng-click="$event.stopPropagation()"
-      >
-        <ul>
-          <li
-            ng-repeat="option in dropdownOptions"
-            ng-click="selectOption(option)"
-						class="dropdown-item"
-          >
-            ➡️{{ option.label }}
-          </li>
-        </ul>
-      </div>
-    </div> -->
 
     <!-- search bar -->
     <form class="search">
@@ -35,8 +16,7 @@
     </form>
   </div>
   <div class="blogs-display">
-    <!-- <div ng-repeat="blog in blogs | filter: search | orderBy : order"> -->
-    <div ng-repeat="blog in blogs | filter: customFilter">
+    <div ng-repeat="blog in blogs | filter: search">
       <div ng-include="'views/blogCard.html'"></div>
     </div>
   </div>
