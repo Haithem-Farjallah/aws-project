@@ -228,13 +228,18 @@ db.connect((err) => {
     // Add a new blog
     app.post("/api/blogs", (req, res) => {
       const newBlog = req.body;
-      db.query("INSERT INTO blogs SET ?", newBlog, (err, results) => {
-        if (err) throw err;
-				else{
-					res.json({ id: results.insertId });
-					console.log(`Data Inserted Successfully: ${newBlog}`)
-				}
-      });
+      try {
+        db.query("INSERT INTO blogs SET ?", newBlog, (err, results) => {
+          if (err) throw err;
+          else {
+            res.json({ id: results.insertId });
+            console.log(`Data Inserted Successfully: ${newBlog}`);
+          }
+        });
+      } catch (error) {
+        console.log(error);
+        res.status(500).send("Error in saving the blog");
+      }
     });
 
     // Remove a blog
@@ -243,7 +248,7 @@ db.connect((err) => {
       db.query("DELETE FROM blogs WHERE id = ?", blogId, (err) => {
         if (err) throw err;
         res.json({ message: "Blog deleted successfully" });
-				console.log(`Blog Deleted Successfully : ${blogId}`)
+        console.log(`Blog Deleted Successfully : ${blogId}`);
       });
     });
   }
