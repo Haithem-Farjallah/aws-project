@@ -9,7 +9,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 const db = mysql.createConnection({
-  host: "database-1.cr8miiusqpre.us-east-1.rds.amazonaws.com",
+  host: "admin.cr8miiusqpre.us-east-1.rds.amazonaws.com",
   user: "admin",
   password: "Hello3100",
   multipleStatements: true,
