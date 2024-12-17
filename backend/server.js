@@ -11,8 +11,15 @@ app.use(bodyParser.json());
 const db = mysql.createConnection({
   host: "database-1.cr8miiusqpre.us-east-1.rds.amazonaws.com",
   user: "admin",
-  password: "hello3100",
+  password: "Hello3100@",
   multipleStatements: true,
+});
+db.connect((err) => {
+  if (err) {
+    console.error("error connecting: " + err.stack);
+    return;
+  }
+  console.log("connected as id " + connection.threadId);
 });
 
 const SQLQuery = `
