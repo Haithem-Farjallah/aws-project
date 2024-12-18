@@ -1,25 +1,25 @@
+<!-- blogs.component.html -->
 <div class="blogs-div">
   <h1>Blogs</h1>
   <div class="menu">
-
     <!-- search bar -->
     <form class="search">
       <label for="search">🔍</label>
       <input
-        placeholder="Serarch blogs by title or author"
+        placeholder="Search blogs by title or author"
         type="text"
-        id="search"
-        ng-model="search"
-        title="search"
+        [(ngModel)]="search"
+        name="search"
         size="50"
       />
     </form>
   </div>
+
   <div class="blogs-display">
-    <div ng-repeat="blog in blogs | filter: search">
-      <div ng-include="'views/blogCard.html'"></div>
+    <div *ngFor="let blog of blogs">
+      <app-blog-card [blog]="blog"></app-blog-card>
     </div>
   </div>
-  
-  <div ng-include="'views/addBlog.html'"></div>
+
+  <app-add-blog></app-add-blog>
 </div>

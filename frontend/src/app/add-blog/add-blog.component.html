@@ -1,0 +1,40 @@
+<!-- add-blog.component.html -->
+<div class="add-blog-div">
+  <h1>Add Blog</h1>
+  <br />
+  <form (ngSubmit)="addBlog()">
+    <div class="form-items">
+      <label for="blog-title">Add Title</label>
+      <input type="text" [(ngModel)]="newBlog.title" name="title" />
+    </div>
+    <div class="form-items">
+      <label for="blog-author">Author's Name</label>
+      <input type="text" [(ngModel)]="newBlog.author" name="author" />
+    </div>
+    <div class="form-items">
+      <label for="blog-thumbnail">Thumbnail</label>
+      <input
+        type="text"
+        [(ngModel)]="newBlog.thumbnail"
+        name="thumbnail"
+        placeholder="Paste the URL of the Image"
+      />
+    </div>
+    <div class="form-items">
+      <label for="blog-sdesc">Short Description</label>
+      <input
+        type="text"
+        [(ngModel)]="newBlog.short_description"
+        name="short_description"
+        maxlength="500"
+      />
+    </div>
+    <div class="form-items">
+      <label for="blog-desc">Description</label>
+      <input type="text" [(ngModel)]="newBlog.description" name="description" />
+    </div>
+    <div class="btn">
+      <button type="submit">Submit</button>
+    </div>
+  </form>
+</div>
