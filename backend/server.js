@@ -241,6 +241,14 @@ db.connect((err) => {
         res.status(500).send("Error in saving the blog");
       }
     });
+	  //route pour le health de l'app
+	  app.get('/health', (req, res) => {
+  res.status(200).json({
+    status: 'healthy',
+    uptime: process.uptime(),
+    timestamp: Date.now(),
+  });
+});
 
     // Remove a blog
     app.delete("/api/blogs/:id", (req, res) => {
